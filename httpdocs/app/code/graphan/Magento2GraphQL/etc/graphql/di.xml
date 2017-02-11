@@ -94,17 +94,17 @@
             <argument name="itemType" xsi:type="object">SortOrderType</argument>
         </arguments>
     </virtualType>
-    <virtualType name="searchCategoryAttributesType" type="graphan\Magento2GraphQL\Search\SearchType">
+    <virtualType name="searchCategoryAttributesType" type="graphan\Magento2GraphQL\Model\Search\SearchType">
         <arguments>
             <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Category\Attribute\Type\CategoryAttributeType</argument>
         </arguments>
     </virtualType>
-    <virtualType name="searchProductsType" type="graphan\Magento2GraphQL\Search\SearchType">
+    <virtualType name="searchProductsType" type="graphan\Magento2GraphQL\Model\Search\SearchType">
         <arguments>
             <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Type\ProductType</argument>
         </arguments>
     </virtualType>
-    <virtualType name="searchProductAttributesType" type="graphan\Magento2GraphQL\Search\SearchType">
+    <virtualType name="searchProductAttributesType" type="graphan\Magento2GraphQL\Model\Search\SearchType">
         <arguments>
             <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Attribute\Type\ProductAttributeType</argument>
         </arguments>
