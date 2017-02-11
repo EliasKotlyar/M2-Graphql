@@ -2,6 +2,7 @@
 
 namespace graphan\Magento2GraphQL\Model\Category;
 
+
 use graphan\Magento2GraphQL\Api\AbstractRepositoryAdapter;
 use Youshido\GraphQL\Execution\ResolveInfo;
 
