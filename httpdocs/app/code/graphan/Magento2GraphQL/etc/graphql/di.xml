@@ -51,7 +51,7 @@
     </virtualType>
     <virtualType name="nonNullAddCategory" type="graphan\Magento2GraphQL\Type\NonNullType">
         <arguments>
-            <argument name="fieldType" xsi:type="object">graphan\Magento2GraphQL\Category\Type\AddCategoryInputType</argument>
+            <argument name="fieldType" xsi:type="object">graphan\Magento2GraphQL\Model\Category\Type\AddCategoryInputType</argument>
         </arguments>
     </virtualType>
     <virtualType name="nonNullUpdateProduct" type="graphan\Magento2GraphQL\Type\NonNullType">
@@ -61,7 +61,7 @@
     </virtualType>
     <virtualType name="nonNullUpdateCategory" type="graphan\Magento2GraphQL\Type\NonNullType">
         <arguments>
-            <argument name="fieldType" xsi:type="object">graphan\Magento2GraphQL\Category\Type\UpdateCategoryInputType</argument>
+            <argument name="fieldType" xsi:type="object">graphan\Magento2GraphQL\Model\Category\Type\UpdateCategoryInputType</argument>
         </arguments>
     </virtualType>
     <virtualType name="nonNullAddProductAttribute" type="graphan\Magento2GraphQL\Type\NonNullType">
@@ -96,7 +96,7 @@
     </virtualType>
     <virtualType name="searchCategoryAttributesType" type="graphan\Magento2GraphQL\Search\SearchType">
         <arguments>
-            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Category\Attribute\Type\CategoryAttributeType</argument>
+            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Category\Attribute\Type\CategoryAttributeType</argument>
         </arguments>
     </virtualType>
     <virtualType name="searchProductsType" type="graphan\Magento2GraphQL\Search\SearchType">
@@ -206,40 +206,40 @@
     <!--Category Fields-->
     <virtualType name="addCategoryField" type="graphan\Magento2GraphQL\Field\AddUpdateField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Category\CategoryRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Category\CategoryRepositoryAdapter</argument>
             <argument name="inputTypes" xsi:type="array">
                 <item name="category" xsi:type="object">nonNullAddCategory</item>
             </argument>
-            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Category\Type\CategoryType</argument>
+            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Category\Type\CategoryType</argument>
             <argument name="name" xsi:type="string">addCategory</argument>
             <argument name="servicePayloadConverter" xsi:type="object">Magento\Framework\Webapi\ServiceInputProcessor</argument>
         </arguments>
     </virtualType>
     <virtualType name="categoriesField" type="graphan\Magento2GraphQL\Field\GetListField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Category\CategoryRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Category\CategoryRepositoryAdapter</argument>
             <argument name="inputTypes" xsi:type="array">
                 <item name="rootCategoryId" xsi:type="object">Youshido\GraphQL\Type\Scalar\IntType</item>
                 <item name="depth" xsi:type="object">Youshido\GraphQL\Type\Scalar\IntType</item>
             </argument>
-            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Category\Type\CategoriesType</argument>
+            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Category\Type\CategoriesType</argument>
             <argument name="name" xsi:type="string">categories</argument>
         </arguments>
     </virtualType>
     <virtualType name="categoryField" type="graphan\Magento2GraphQL\Field\GetField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Category\CategoryRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Category\CategoryRepositoryAdapter</argument>
             <argument name="inputTypes" xsi:type="array">
                 <item name="id" xsi:type="object">nonNullInt</item>
                 <item name="storeId" xsi:type="object">Youshido\GraphQL\Type\Scalar\IntType</item>
             </argument>
-            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Category\Type\CategoryType</argument>
+            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Category\Type\CategoryType</argument>
             <argument name="name" xsi:type="string">category</argument>
         </arguments>
     </virtualType>
     <virtualType name="deleteCategoryField" type="graphan\Magento2GraphQL\Field\DeleteField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Category\CategoryRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Category\CategoryRepositoryAdapter</argument>
             <argument name="inputTypes" xsi:type="array">
                 <item name="id" xsi:type="object">nonNullInt</item>
             </argument>
@@ -247,9 +247,9 @@
             <argument name="name" xsi:type="string">deleteCategory</argument>
         </arguments>
     </virtualType>
-    <virtualType name="moveCategoryField" type="graphan\Magento2GraphQL\Category\Field\MoveCategoryField">
+    <virtualType name="moveCategoryField" type="graphan\Magento2GraphQL\Model\Category\Field\MoveCategoryField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Category\CategoryRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Category\CategoryRepositoryAdapter</argument>
             <argument name="inputTypes" xsi:type="array">
                 <item name="id" xsi:type="object">nonNullInt</item>
                 <item name="parentId" xsi:type="object">Youshido\GraphQL\Type\Scalar\IntType</item>
@@ -261,11 +261,11 @@
     </virtualType>
     <virtualType name="updateCategoryField" type="graphan\Magento2GraphQL\Field\AddUpdateField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Category\CategoryRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Category\CategoryRepositoryAdapter</argument>
             <argument name="inputTypes" xsi:type="array">
                 <item name="category" xsi:type="object">nonNullUpdateCategory</item>
             </argument>
-            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Category\Type\CategoryType</argument>
+            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Category\Type\CategoryType</argument>
             <argument name="name" xsi:type="string">updateCategory</argument>
             <argument name="servicePayloadConverter" xsi:type="object">Magento\Framework\Webapi\ServiceInputProcessor</argument>
         </arguments>
@@ -274,17 +274,17 @@
     <!--CategoryAttribute Fields-->
     <virtualType name="categoryAttributeField" type="graphan\Magento2GraphQL\Field\GetField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Category\Attribute\CategoryAttributeRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Category\Attribute\CategoryAttributeRepositoryAdapter</argument>
             <argument name="inputTypes" xsi:type="array">
                 <item name="id" xsi:type="object">nonNullInt</item>
             </argument>
-            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Category\Attribute\Type\CategoryAttributeType</argument>
+            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Category\Attribute\Type\CategoryAttributeType</argument>
             <argument name="name" xsi:type="string">categoryAttribute</argument>
         </arguments>
     </virtualType>
     <virtualType name="categoryAttributesField" type="graphan\Magento2GraphQL\Field\SearchField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Category\Attribute\CategoryAttributeRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Category\Attribute\CategoryAttributeRepositoryAdapter</argument>
             <argument name="responseType" xsi:type="object">searchCategoryAttributesType</argument>
             <argument name="name" xsi:type="string">categoryAttributes</argument>
             <argument name="servicePayloadConverter" xsi:type="object">Magento\Framework\Webapi\ServiceInputProcessor</argument>
