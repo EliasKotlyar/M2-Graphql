@@ -31,7 +31,7 @@
                 type="Magento\Framework\Model\ActionValidator\RemoveAction\Allowed" />
 
     <preference for="graphan\Magento2GraphQL\Api\SearchCriteriaHelperInterface"
-                type="graphan\Magento2GraphQL\Search\SearchCriteriaHelper" />
+                type="graphan\Magento2GraphQL\Model\Search\SearchCriteriaHelper" />
 
     <!--Virtual Types-->
     <virtualType name="nonNullString" type="graphan\Magento2GraphQL\Type\NonNullType">
