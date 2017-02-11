@@ -309,7 +309,7 @@
             <argument name="deleteCategoryField" xsi:type="object">deleteCategoryField</argument>
             <argument name="deleteProductAttributeField" xsi:type="object">deleteProductAttributeField</argument>
             <argument name="deleteProductField" xsi:type="object">deleteProductField</argument>
-            <argument name="modulesField" xsi:type="object">graphan\Magento2GraphQL\Module\ModulesField</argument>
+            <argument name="modulesField" xsi:type="object">graphan\Magento2GraphQL\Model\Module\ModulesField</argument>
             <argument name="moveCategoryField" xsi:type="object">moveCategoryField</argument>
             <argument name="productAttributeField" xsi:type="object">productAttributeField</argument>
             <argument name="productAttributesField" xsi:type="object">productAttributesField</argument>
@@ -320,7 +320,7 @@
         </arguments>
     </type>
 
-    <type name="graphan\Magento2GraphQL\Module\ModulesField">
+    <type name="graphan\Magento2GraphQL\Model\Module\ModulesField">
         <arguments>
             <argument name="moduleService" xsi:type="object">\Magento\Backend\Service\V1\ModuleService</argument>
         </arguments>
