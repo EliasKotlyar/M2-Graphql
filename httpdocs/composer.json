@@ -9,7 +9,8 @@
     ],
     "require": {
         "magento/product-community-edition": "2.1.4",
-        "composer/composer": "@alpha"
+        "composer/composer": "@alpha",
+        "youshido/graphql": "1.2.*"
     },
     "require-dev": {
         "phpunit/phpunit": "4.1.0",

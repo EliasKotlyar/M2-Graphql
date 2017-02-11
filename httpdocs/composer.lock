@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "da3d534dbcc157901a291d01e94a2ed2",
-    "content-hash": "0299a7d8aa23b3e1508d08ce2f45a566",
+    "hash": "13e02d88308c26558533299ce949d2de",
+    "content-hash": "b691ba75f6d88695c318ea90531db504",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -6265,6 +6265,49 @@
                 "yui"
             ],
             "time": "2014-09-22 08:08:50"
+        },
+        {
+            "name": "youshido/graphql",
+            "version": "v1.2.9.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Youshido/GraphQL.git",
+                "reference": "e135016da0b0384ccae3dc9eddbe5f7a3c9cd7e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Youshido/GraphQL/zipball/e135016da0b0384ccae3dc9eddbe5f7a3c9cd7e8",
+                "reference": "e135016da0b0384ccae3dc9eddbe5f7a3c9cd7e8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5,<8.0-DEV"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Youshido\\GraphQL\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandr Viniychuk",
+                    "email": "a@viniychuk.com"
+                },
+                {
+                    "name": "Portey Vasil",
+                    "email": "portey@gmail.com"
+                }
+            ],
+            "description": "Pure PHP GraphQL",
+            "time": "2016-10-16 03:25:00"
         },
         {
             "name": "zendframework/zend-code",

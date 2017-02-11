@@ -300,7 +300,7 @@
         </arguments>
     </type>
 
-    <type name="graphan\Magento2GraphQL\Model\Schema\MagentoSchema">
+    <type name="graphan\Magento2GraphQL\Schema\MagentoSchema">
         <arguments>
             <argument name="addCategoryField" xsi:type="object">addCategoryField</argument>
             <argument name="addProductAttributeField" xsi:type="object">addProductAttributeField</argument>
