@@ -46,7 +46,7 @@
     </virtualType>
     <virtualType name="nonNullAddProduct" type="graphan\Magento2GraphQL\Type\NonNullType">
         <arguments>
-            <argument name="fieldType" xsi:type="object">graphan\Magento2GraphQL\Product\Type\AddProductInputType</argument>
+            <argument name="fieldType" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Type\AddProductInputType</argument>
         </arguments>
     </virtualType>
     <virtualType name="nonNullAddCategory" type="graphan\Magento2GraphQL\Type\NonNullType">
@@ -56,7 +56,7 @@
     </virtualType>
     <virtualType name="nonNullUpdateProduct" type="graphan\Magento2GraphQL\Type\NonNullType">
         <arguments>
-            <argument name="fieldType" xsi:type="object">graphan\Magento2GraphQL\Product\Type\UpdateProductInputType</argument>
+            <argument name="fieldType" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Type\UpdateProductInputType</argument>
         </arguments>
     </virtualType>
     <virtualType name="nonNullUpdateCategory" type="graphan\Magento2GraphQL\Type\NonNullType">
@@ -66,7 +66,7 @@
     </virtualType>
     <virtualType name="nonNullAddProductAttribute" type="graphan\Magento2GraphQL\Type\NonNullType">
         <arguments>
-            <argument name="fieldType" xsi:type="object">graphan\Magento2GraphQL\Product\Attribute\Type\ProductAttributeInputType</argument>
+            <argument name="fieldType" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Attribute\Type\ProductAttributeInputType</argument>
         </arguments>
     </virtualType>
     <virtualType name="FilterType" type="Youshido\GraphQL\Type\InputObject\InputObjectType">
@@ -101,40 +101,40 @@
     </virtualType>
     <virtualType name="searchProductsType" type="graphan\Magento2GraphQL\Search\SearchType">
         <arguments>
-            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Product\Type\ProductType</argument>
+            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Type\ProductType</argument>
         </arguments>
     </virtualType>
     <virtualType name="searchProductAttributesType" type="graphan\Magento2GraphQL\Search\SearchType">
         <arguments>
-            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Product\Attribute\Type\ProductAttributeType</argument>
+            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Attribute\Type\ProductAttributeType</argument>
         </arguments>
     </virtualType>
 
     <!--Product Fields-->
     <virtualType name="productField" type="graphan\Magento2GraphQL\Field\GetField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Product\ProductRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Product\ProductRepositoryAdapter</argument>
             <argument name="inputTypes" xsi:type="array">
                 <item name="sku" xsi:type="object">nonNullString</item>
             </argument>
-            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Product\Type\ProductType</argument>
+            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Type\ProductType</argument>
             <argument name="name" xsi:type="string">product</argument>
         </arguments>
     </virtualType>
     <virtualType name="addProductField" type="graphan\Magento2GraphQL\Field\AddUpdateField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Product\ProductRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Product\ProductRepositoryAdapter</argument>
             <argument name="inputTypes" xsi:type="array">
                 <item name="product" xsi:type="object">nonNullAddProduct</item>
             </argument>
-            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Product\Type\ProductType</argument>
+            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Type\ProductType</argument>
             <argument name="name" xsi:type="string">addProduct</argument>
             <argument name="servicePayloadConverter" xsi:type="object">Magento\Framework\Webapi\ServiceInputProcessor</argument>
         </arguments>
     </virtualType>
     <virtualType name="deleteProductField" type="graphan\Magento2GraphQL\Field\DeleteField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Product\ProductRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Product\ProductRepositoryAdapter</argument>
             <argument name="inputTypes" xsi:type="array">
                 <item name="sku" xsi:type="object">nonNullString</item>
             </argument>
@@ -144,18 +144,18 @@
     </virtualType>
     <virtualType name="updateProductField" type="graphan\Magento2GraphQL\Field\AddUpdateField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Product\ProductRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Product\ProductRepositoryAdapter</argument>
             <argument name="inputTypes" xsi:type="array">
                 <item name="product" xsi:type="object">nonNullUpdateProduct</item>
             </argument>
-            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Product\Type\ProductType</argument>
+            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Type\ProductType</argument>
             <argument name="name" xsi:type="string">updateProduct</argument>
             <argument name="servicePayloadConverter" xsi:type="object">Magento\Framework\Webapi\ServiceInputProcessor</argument>
         </arguments>
     </virtualType>
     <virtualType name="productsField" type="graphan\Magento2GraphQL\Field\SearchField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Product\ProductRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Product\ProductRepositoryAdapter</argument>
             <argument name="responseType" xsi:type="object">searchProductsType</argument>
             <argument name="name" xsi:type="string">products</argument>
             <argument name="servicePayloadConverter" xsi:type="object">Magento\Framework\Webapi\ServiceInputProcessor</argument>
@@ -165,18 +165,18 @@
     <!--ProductAttribute Fields-->
     <virtualType name="addProductAttributeField" type="graphan\Magento2GraphQL\Field\AddUpdateField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Product\Attribute\ProductAttributeRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Attribute\ProductAttributeRepositoryAdapter</argument>
             <argument name="inputTypes" xsi:type="array">
                 <item name="attribute" xsi:type="object">nonNullAddProductAttribute</item>
             </argument>
-            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Product\Attribute\Type\ProductAttributeType</argument>
+            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Attribute\Type\ProductAttributeType</argument>
             <argument name="name" xsi:type="string">addProductAttribute</argument>
             <argument name="servicePayloadConverter" xsi:type="object">Magento\Framework\Webapi\ServiceInputProcessor</argument>
         </arguments>
     </virtualType>
     <virtualType name="deleteProductAttributeField" type="graphan\Magento2GraphQL\Field\DeleteField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Product\Attribute\ProductAttributeRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Attribute\ProductAttributeRepositoryAdapter</argument>
             <argument name="inputTypes" xsi:type="array">
                 <item name="code" xsi:type="object">nonNullString</item>
             </argument>
@@ -186,17 +186,17 @@
     </virtualType>
     <virtualType name="productAttributeField" type="graphan\Magento2GraphQL\Field\GetField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Product\Attribute\ProductAttributeRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Attribute\ProductAttributeRepositoryAdapter</argument>
             <argument name="inputTypes" xsi:type="array">
                 <item name="id" xsi:type="object">nonNullString</item>
             </argument>
-            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Product\Attribute\Type\ProductAttributeType</argument>
+            <argument name="responseType" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Attribute\Type\ProductAttributeType</argument>
             <argument name="name" xsi:type="string">productAttribute</argument>
         </arguments>
     </virtualType>
     <virtualType name="productAttributesField" type="graphan\Magento2GraphQL\Field\SearchField">
         <arguments>
-            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Product\Attribute\ProductAttributeRepositoryAdapter</argument>
+            <argument name="repository" xsi:type="object">graphan\Magento2GraphQL\Model\Product\Attribute\ProductAttributeRepositoryAdapter</argument>
             <argument name="responseType" xsi:type="object">searchProductAttributesType</argument>
             <argument name="name" xsi:type="string">productAttributes</argument>
             <argument name="servicePayloadConverter" xsi:type="object">Magento\Framework\Webapi\ServiceInputProcessor</argument>
